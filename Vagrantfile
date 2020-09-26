@@ -57,7 +57,7 @@ Vagrant.configure("2") do |config|
     # they should be comma-separated (if you use more than one) within
     # square brackets.
     #
-    aws.security_groups = ["sg-0b24fd351f61cdc0b", "sg-086c5750fd85d9a7f"]
+    aws.security_groups = ["sg-0b24fd351f61cdc0b", "sg-086c5750fd85d9a7f", "sg-04f44380d05f999df"]
 
     # For Vagrant to deploy to EC2 for Amazon Educate accounts, it
     # seems that a specific availability_zone needs to be selected
@@ -92,6 +92,8 @@ config.vm.define "webserver" do |webserver|
       # Change VM's webserver's configuration to use shared folder.
       # (Look inside test-website.conf for specifics.)
       cp /vagrant/test-website.conf /etc/apache2/sites-available/      
+      chmod 755 /vagrant
+      chmod 755 /vagrant/www
       # install our website configuration and disable the default
       a2ensite test-website
       a2dissite 000-default
@@ -109,6 +111,8 @@ config.vm.define "webserver" do |webserver|
       # Change VM's query converter's configuration to use shared folder.
       # (Look inside conversion-website.conf for specifics.)
       cp /vagrant/conversion-website.conf /etc/apache2/sites-available/
+      chmod 777 /vagrant
+      chmod 777 /vagrant/www
       # install our website configuration and disable the default
       a2ensite conversion-website
       a2dissite 000-default
