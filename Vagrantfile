@@ -83,6 +83,22 @@ Vagrant.configure("2") do |config|
     override.ssh.username = "ubuntu"
   end
 
+config.vm.define "webserver" do |webserver|
+    webserver.vm.hostname = "webserver"
+    webserver.vm.provision "shell", inline: <<-SHELL
+      apt-get update
+      apt-get install -y apache2 php libapache2-mod-php php-mysql
+
+      # Change VM's webserver's configuration to use shared folder.
+      # (Look inside test-website.conf for specifics.)
+      cp /vagrant/test-website.conf /etc/apache2/sites-available/
+      # install our website configuration and disable the default
+      a2ensite test-website
+      a2dissite 000-default
+      service apache2 reload
+    SHELL
+  end
+
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
