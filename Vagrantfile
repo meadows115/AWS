@@ -91,7 +91,7 @@ config.vm.define "webserver" do |webserver|
 
       # Change VM's webserver's configuration to use shared folder.
       # (Look inside test-website.conf for specifics.)
-      cp /vagrant/test-website.conf /etc/apache2/sites-available/
+      cp /vagrant/test-website.conf /etc/apache2/sites-available/      
       # install our website configuration and disable the default
       a2ensite test-website
       a2dissite 000-default
@@ -99,6 +99,7 @@ config.vm.define "webserver" do |webserver|
     SHELL
   end
 
+  
   config.vm.define "queryconverter" do |queryconverter|
     queryconverter.vm.hostname = "queryconverter"
     queryconverter.vm.provision "shell", inline: <<-SHELL
