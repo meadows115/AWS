@@ -67,7 +67,7 @@ Vagrant.configure("2") do |config|
     # You need to get the region correct, and the correct form of
     # configuration (probably amd64, hvm:ebs-ssd, hvm).
     #
-    ##aws.ami = ""
+    aws.ami = "ami-0f40c8f97004632f9"
 
     # If using Ubuntu, you probably also need to uncomment the line
     # below, so that Vagrant connects using username "ubuntu".
