@@ -66,7 +66,7 @@ echo "<script type= 'text/javascript'>alert('New member successfully added');</s
 }
 
 ?>
-<p>View all <a href="http://192.168.2.13"> members here</a></p>
+<p>View all <a href="http://ec2-3-87-159-122.compute-1.amazonaws.com/"> members here</a></p>
 </body>
 </html>
 
