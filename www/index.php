@@ -46,10 +46,10 @@
 <?php
 
 if(isset($_POST["submit"])){ 
-$db_host   = '192.168.2.12';
-$db_name   = 'nikkidb';
-$db_user   = 'webserviceuser';
-$db_passwd = 'newpassword';
+$db_host   = 'database-01.ced2xkjsxawm.us-east-1.rds.amazonaws.com';
+$db_name   = 'members';
+$db_user   = 'admin';
+$db_passwd = 'hellothere1';
 
 $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
 
@@ -66,7 +66,7 @@ echo "<script type= 'text/javascript'>alert('New member successfully added');</s
 }
 
 ?>
-<p>View all <a href="http://ec2-3-87-159-122.compute-1.amazonaws.com/"> members here</a></p>
+<p>View all <a href="http://ec2-52-201-242-29.compute-1.amazonaws.com"> members here</a></p>
 </body>
 </html>
 

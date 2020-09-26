@@ -10,10 +10,10 @@
 
 <?php 
 
-$db_host   = '192.168.2.12';
-$db_name   = 'nikkidb';
-$db_user   = 'webserviceuser';
-$db_passwd = 'newpassword';
+$db_host   = 'database-01.ced2xkjsxawm.us-east-1.rds.amazonaws.com';
+$db_name   = 'members';
+$db_user   = 'admin';
+$db_passwd = 'hellothere1';
 
 $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
 
