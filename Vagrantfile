@@ -55,8 +55,8 @@ Vagrant.configure("2") do |config|
     # (will be of the form "us-east-1a"). The subnet_id for that
     # availability_zone needs to be included, too (will be of the form
     # "subnet-...").
-    ##aws.availability_zone = ""
-    ##aws.subnet_id = ""
+    aws.availability_zone = "us-east-1a"
+    aws.subnet_id = "subnet-db04a384"
 
     # You need to chose the AMI (i.e., hard disk image) to use. This
     # will be of the form "ami-...".
@@ -67,11 +67,11 @@ Vagrant.configure("2") do |config|
     # You need to get the region correct, and the correct form of
     # configuration (probably amd64, hvm:ebs-ssd, hvm).
     #
-    ##aws.ami = ""
+    aws.ami = "ami-0f40c8f97004632f9"
 
     # If using Ubuntu, you probably also need to uncomment the line
     # below, so that Vagrant connects using username "ubuntu".
-    ##override.ssh.username = "ubuntu"
+    override.ssh.username = "ubuntu"
   end
 
   # Enable provisioning with a shell script. Additional provisioners such as
