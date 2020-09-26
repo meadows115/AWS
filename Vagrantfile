@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
     override.ssh.private_key_path = "~/.ssh/cosc349.pem"
 
     # Choose your Amazon EC2 instance type (t2.micro is cheap).
-    ##aws.instance_type = "t2.micro"
+    aws.instance_type = "t2.micro"
 
     # You need to indicate the list of security groups your VM should
     # be in. Each security group will be of the form "sg-...", and
