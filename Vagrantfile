@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
 
     # If using Ubuntu, you probably also need to uncomment the line
     # below, so that Vagrant connects using username "ubuntu".
-    ##override.ssh.username = "ubuntu"
+    override.ssh.username = "ubuntu"
   end
 
   # Enable provisioning with a shell script. Additional provisioners such as
